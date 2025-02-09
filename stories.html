@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Stories - Alumni Connect</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header and Navigation */
+        /* header {
+    display: inline;
+    background: #2c3e50;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+        header {
+            background-color: #0b213a;
+            padding: 15px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-right: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .stories-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .stories-container h1 {
+            font-size: 36px;
+            color: #2c3e50;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .story-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-card img {
+            width: 100%;
+            border-radius: 8px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .story-card h3 {
+            margin-top: 15px;
+            font-size: 22px;
+            color: #007bff;
+        }
+
+        .story-card p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .read-more:hover {
+            background: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #ffffff;
+                position: absolute;
+                top: 52px;
+                left: 0;
+                padding: 10px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 5px 0;
+                padding-left: 20px;
+                border-bottom: 1px solid rgb(119, 119, 187);
+                /* text-align: center; */
+            }
+
+            .nav-links li a {
+                color: #000;
+            }
+
+            .menu-icon {
+                display: block;
+                color: white;
+            }
+            .logo img{
+                width: 70%;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                 <img src="image/logo.png" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="stories-container">
+        <h1>Alumni Stories</h1>
+        <div class="stories-grid">
+            <div class="story-card">
+                <img src="image\index1.webp" alt="Story Image">
+                <h3>John Doe - Journey to Success</h3>
+                <p>John shares how Alumni Connect helped him land his dream job.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="story-card">
+                <img src="image\index2.webp" alt="Story Image">
+                <h3>Emily Smith - Building a Business</h3>
+                <p>Emily turned her passion into a thriving business with help from alumni connections.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="story-card">
+                <img src="image\index3.webp" alt="Story Image">
+                <h3>Michael Brown - Giving Back</h3>
+                <p>Michael now mentors students and shares his knowledge with new graduates.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Alumni Connect. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
